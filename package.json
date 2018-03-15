@@ -1,0 +1,35 @@
+{
+  "name": "heavy-tree-view",
+  "version": "0.0.1",
+  "description": "render a tree data structure with all nodes pulled to the bottom of the tree",
+  "main": "src/HeavyTreeView.js",
+  "repository": "git@github.com:cdaringe/heavy-tree-view.git",
+  "author": "cdaringe <christopher.dieringer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier-standard 'src/**/*.js'",
+    "precommit": "lint-staged",
+    "test": "ava test/**/*.test.js"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "devDependencies": {
+    "ava": "https://github.com/avajs/ava",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier-standard": "^8.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "ava": {
+    "babel": false,
+    "compileEnhancements": false
+  }
+}
