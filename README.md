@@ -1,6 +1,6 @@
 # heavy-tree-view
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/cdaringe/heavy-tree-node.svg)](https://greenkeeper.io/) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![CircleCI](https://circleci.com/gh/cdaringe/heavy-tree-view/tree/master.svg?style=svg)](https://circleci.com/gh/cdaringe/heavy-tree-view/tree/master)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![CircleCI](https://circleci.com/gh/cdaringe/heavy-tree-view/tree/master.svg?style=svg)](https://circleci.com/gh/cdaringe/heavy-tree-view/tree/master)
 
 render a tree data structure with all nodes pulled to the bottom of the tree
 
