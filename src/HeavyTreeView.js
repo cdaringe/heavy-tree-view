@@ -59,12 +59,14 @@ class HeavyTreeView {
         var isLastDependent = i === numDecendants.length - 1
         var chars = [STD_EDGE_CHAR]
         if (dependentCount && !isLastDependent) {
-          chars = chars.concat(repeat('|', dependentCount))
+          chars = chars.concat(times(dependentCount, () => '|'))
         }
         if (isLastDependent) chars[chars.length - 1] = TOP_EDGE_CHAR
         return agg.concat(chars)
       }, [])
-      .map((char, j) => [[heavyNode.x, heavyNode.y - 1 - j], char])
+      .map((char, j) => {
+        return [[heavyNode.x, heavyNode.y - 1 - j], char]
+      })
   }
   lineString (heavyNode, spineColCharsForLine) {
     var str = ''
@@ -115,7 +117,7 @@ class HeavyTreeView {
           ) + colTerm
       } else {
         // col as pure buffer
-        str += repeat('-', this.widthsByColumn(i))
+        str += repeat(hasTerminatedOnce ? ' ' : '-', this.widthsByColumn(i) - 1)
       }
       ++i
     }

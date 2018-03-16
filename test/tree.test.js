@@ -41,3 +41,18 @@ ava('case8', async function (t) {
   var res = HeavyTreeView.parseTree(trees.a8).toString()
   t.is(res, trees.a8.res)
 })
+
+ava('case9', async function (t) {
+  var res = HeavyTreeView.parseTree(trees.a9).toString()
+  t.is(res, trees.a9.res)
+})
+
+ava('caseA', async function (t) {
+  var res = HeavyTreeView.parseTree(trees.aA).toString()
+  t.is(res, trees.aA.res)
+})
+
+ava('caseB', async function (t) {
+  var res = HeavyTreeView.parseTree(trees.aB).toString()
+  t.is(res, trees.aB.res)
+})

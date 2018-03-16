@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier-standard 'src/**/*.js'",
-    "precommit": "lint-staged",
+    "lint-staged": "lint-staged",
+    "precommit": "run-p lint-staged test",
     "test": "ava test/**/*.test.js"
   },
   "lint-staged": {
@@ -23,6 +24,7 @@
     "ava": "https://github.com/avajs/ava",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
+    "npm-run-all": "^4.1.2",
     "prettier-standard": "^8.0.0"
   },
   "dependencies": {

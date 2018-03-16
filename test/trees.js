@@ -137,11 +137,6 @@ c7──┐   |
         a7`
 .trim()
 
-
-
-
-
-
 var f8 = {
   name: 'f8',
   dependsOn: []
@@ -175,6 +170,96 @@ c8──┐   |
         a8`
 .trim()
 
+var g9 = {
+  name: 'g9',
+  dependsOn: []
+}
+var f9 = {
+  name: 'f9',
+  dependsOn: []
+}
+var e9 = {
+  name: 'e9',
+  dependsOn: [f9]
+}
+var d9 = {
+  name: 'd9',
+  dependsOn: [e9, g9]
+}
+var c9 = {
+  name: 'c9',
+  dependsOn: [d9]
+}
+var b9 = {
+  name: 'b9',
+  dependsOn: []
+}
+var a9 = {
+  name: 'a9',
+  dependsOn: [b9, c9]
+}
+a9.res = `
+g9----──┐
+f9──┐   |
+    e9--┤
+        d9──┐
+            c9──┐
+b9--------------┤
+                a9`
+.trim()
+
+var cA = {
+  name: 'cA',
+  dependsOn: []
+}
+var bA = {
+  name: 'bA',
+  dependsOn: [cA]
+}
+var dA = {
+  name: 'dA',
+  dependsOn: [bA]
+}
+var aA = {
+  name: 'aA',
+  dependsOn: [bA, dA]
+}
+aA.res = `
+cA──┐
+    bA──┐
+        dA──┐
+cA──┐       |
+    bA------┤
+            aA
+`.trim()
+
+var eB = {
+  name: 'eB',
+  dependsOn: []
+}
+var dB = {
+  name: 'dB',
+  dependsOn: []
+}
+var cB = {
+  name: 'cB',
+  dependsOn: [dB]
+}
+var bB = {
+  name: 'bB',
+  dependsOn: [cB]
+}
+var aB = {
+  name: 'aB',
+  dependsOn: [bB, eB]
+}
+aB.res = `
+eB--------──┐
+dB──┐       |
+    cB──┐   |
+        bB--┤
+            aB
+`.trim()
 
 module.exports = {
   a1,
@@ -184,13 +269,8 @@ module.exports = {
   a5,
   a6,
   a7,
-  a8
+  a8,
+  a9,
+  aA,
+  aB
 }
-// 4 3 2 1 0
-// w-|
-//   z-|
-//     y-|
-//       x-|
-//     c-| |
-//       b-|
-//         a
