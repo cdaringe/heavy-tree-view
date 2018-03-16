@@ -44,7 +44,7 @@ class HeavyTreeView {
   }
   findSpineChars (heavyNode) {
     var node = heavyNode.node
-    var dependentHeavyNodes = node.dependsOn.map(node =>
+    var dependentHeavyNodes = node.children.map(node =>
       this.nodesToHeavyNode.get(node)
     )
     if (dependentHeavyNodes.length === 0) return null
@@ -170,7 +170,7 @@ HeavyTreeView.toHeavyTreeNode = function toHeavyTreeNode (
   row,
   isRoot
 ) {
-  var dependents = Object.values(node.dependsOn)
+  var dependents = Object.values(node.children)
   var htn
   // leaf nodes
   if (!dependents.length) {

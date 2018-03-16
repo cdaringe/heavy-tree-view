@@ -15,11 +15,11 @@ HeavyTreeNode.count = count
 HeavyTreeNode.height = height
 
 function count (node) {
-  return 1 + node.dependsOn.reduce((tot, node) => tot + count(node), 0)
+  return 1 + node.children.reduce((tot, node) => tot + count(node), 0)
 }
 
 function height (node) {
-  var children = node.dependsOn
+  var children = node.children
   if (children.length === 0) return 1
   var max = Math.max.apply(null, children.map(node => height(node)))
   return 1 + max
