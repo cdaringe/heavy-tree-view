@@ -23,7 +23,7 @@
   "devDependencies": {
     "ava": "https://github.com/avajs/ava",
     "husky": "^1.0.0",
-    "lint-staged": "^7.0.0",
+    "lint-staged": "^8.1.2",
     "npm-run-all": "^4.1.2",
     "prettier-standard": "^8.0.0"
   },
